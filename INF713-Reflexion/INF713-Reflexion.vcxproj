@@ -59,15 +59,23 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Reflecto\ReflectoPropertySheet.props" />
+    <Import Project="INF713-Reflexion.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Reflecto\ReflectoPropertySheet.props" />
+    <Import Project="INF713-Reflexion.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Reflecto\ReflectoPropertySheet.props" />
+    <Import Project="INF713-Reflexion.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Reflecto\ReflectoPropertySheet.props" />
+    <Import Project="INF713-Reflexion.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -140,6 +148,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="INF713-Reflexion.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Potato.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reflecto\JsonCpp\JsonCpp.vcxproj">
+      <Project>{bdfe2d9f-5a3d-44b7-88b2-4ff7035af21c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflecto\ReflectoCommon\ReflectoCommon.vcxproj">
+      <Project>{3403ac28-d2dc-4a4d-9062-9f5d1f883ef7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflecto\ReflectoReflectionRepl\ReflectoReflectionRepl.vcxproj">
+      <Project>{e139ea4a-7d63-4539-b19a-55751baa123d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflecto\ReflectoReflection\ReflectoReflection.vcxproj">
+      <Project>{d30205ba-bca6-4d46-b07e-fc2bbbb45ee3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflecto\ReflectoSerialization\ReflectoSerialization.vcxproj">
+      <Project>{3f966c5e-af4a-4375-9954-234f5bcf304e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
